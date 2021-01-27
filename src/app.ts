@@ -3,6 +3,8 @@ import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 
+import authRoute from './routes/auth.routes'
+
 const app = express()
 
 //Settings
@@ -15,6 +17,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 //Routes
+app.use('/api/auth', authRoute)
+
 app.get('/', (req,res)=>{
   res.send(`The API is at http://127.0.0.1:${app.get('port')}`)
 })
