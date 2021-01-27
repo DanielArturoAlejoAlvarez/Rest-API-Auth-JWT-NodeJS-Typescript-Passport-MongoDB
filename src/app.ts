@@ -7,6 +7,7 @@ import passport from "passport";
 import middlewarePassport from "./midlewares/passport";
 
 import authRoute from "./routes/auth.routes";
+import userRoute from "./routes/user.routes";
 
 const app = express();
 
@@ -25,6 +26,7 @@ passport.use(middlewarePassport);
 
 //Routes
 app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
 
 app.get("/", (req, res) => {
   res.send(`The API is at http://127.0.0.1:${app.get("port")}`);
