@@ -1,0 +1,19 @@
+{
+  "name": "rest-api-jwt-ts-passport",
+  "version": "1.0.0",
+  "description": "Software of Development with Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Typescript",
+    "NodeJS",
+    "JWT",
+    "Express",
+    "MongoDB",
+    "Passport"
+  ],
+  "author": "Daniel Alejo Alvarez",
+  "license": "MIT"
+}
