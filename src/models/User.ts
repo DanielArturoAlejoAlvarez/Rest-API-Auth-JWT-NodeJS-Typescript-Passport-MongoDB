@@ -1,15 +1,6 @@
-import { model, Schema, Document } from "mongoose";
+import { model, Schema } from "mongoose";
 import bcrypt from "bcrypt";
-
-export interface IUser extends Document {
-  displayName: string;
-  username: string;
-  email: string;
-  password: string;
-  avatar: string;
-  role: string;
-  status: boolean;
-}
+import { IUser } from "./IUser";
 
 const UserSchema = new Schema(
   {

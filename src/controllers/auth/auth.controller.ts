@@ -1,7 +1,8 @@
 import config from "../../config/config";
 
 import { Request, Response } from "express";
-import User, { IUser } from "../../models/User";
+import { IUser } from "../../models/IUser";
+import User from "../../models/User";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
