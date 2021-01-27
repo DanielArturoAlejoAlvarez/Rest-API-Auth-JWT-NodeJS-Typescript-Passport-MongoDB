@@ -5,7 +5,7 @@ import passport from "passport";
 const router = Router();
 
 router.post("/signin", signIn);
-router.post("signup", signUp);
+router.post("/signup", signUp);
 router.get(
   "/profile",
   passport.authenticate("jwt", { session: false }),
