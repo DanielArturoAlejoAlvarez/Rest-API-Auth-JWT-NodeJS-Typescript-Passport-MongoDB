@@ -2,6 +2,9 @@ import { model, Schema } from "mongoose";
 import bcrypt from "bcrypt";
 import { IUser } from "./IUser";
 
+/**
+ * Create a new Schema from mongoose
+ */
 const UserSchema = new Schema(
   {
     displayName: {
@@ -45,6 +48,9 @@ const UserSchema = new Schema(
   }
 );
 
+/**
+ * A promise to be either resolved with the encrypted data salt or rejected with an Error
+ */
 UserSchema.pre<IUser>("save", async function (next) {
   const user = this;
   if (!user.isModified("password")) return next();
@@ -55,4 +61,7 @@ UserSchema.pre<IUser>("save", async function (next) {
   next();
 });
 
+/**
+ * IUser Interface Document class inheritance
+ */
 export default model<IUser>("User", UserSchema);

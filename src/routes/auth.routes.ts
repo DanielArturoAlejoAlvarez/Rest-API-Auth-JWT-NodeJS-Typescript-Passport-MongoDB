@@ -2,6 +2,10 @@ import { Router } from "express";
 import { signIn, signUp } from "../controllers/auth/auth.controller";
 import passport from "passport";
 
+/**
+ * Router
+ * Using Passport
+ */
 const router = Router();
 
 router.post("/signin", signIn);

@@ -1,6 +1,11 @@
 import config from './config/config'
 import mongoose from 'mongoose'
 
+/**
+ * Connection to DB
+ * Using Mongoose
+ * MongoClientOptions
+ */
 mongoose.connect(config.DB.URI, {
   useCreateIndex: true,
   useNewUrlParser: true,

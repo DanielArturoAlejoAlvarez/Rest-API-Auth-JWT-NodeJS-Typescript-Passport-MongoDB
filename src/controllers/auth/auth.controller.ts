@@ -6,6 +6,12 @@ import User from "../../models/User";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
+/**
+ * Creating tokens 
+ * Using jsonwebtoken
+ * @param user 
+ * @returns
+ */
 function createToken(user: IUser) {
   return jwt.sign(
     {
@@ -19,6 +25,12 @@ function createToken(user: IUser) {
   );
 }
 
+/**
+ * User registration function 
+ * @param req 
+ * @param res 
+ * @returns
+ */
 export const signUp = async (
   req: Request,
   res: Response
@@ -39,6 +51,12 @@ export const signUp = async (
   return res.status(201).json(newUser);
 };
 
+/**
+ * User login function
+ * @param req 
+ * @param res 
+ * @returns
+ */
 export const signIn = async (
   req: Request,
   res: Response

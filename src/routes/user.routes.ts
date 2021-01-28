@@ -4,6 +4,10 @@ import passport from "passport";
 
 const router = Router();
 
+/**
+ * Apply Middleware Strategy from Passport
+ * Authentication with Passport
+ */
 router.get("/", passport.authenticate("jwt", { session: false }), getUsers);
 router.get("/:id", passport.authenticate("jwt", { session: false }), getUser);
 
